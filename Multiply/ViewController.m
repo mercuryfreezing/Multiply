@@ -132,7 +132,8 @@
             self.answerLabel.text = @"Buzz";
     }
 
-    [_numberTextField resignFirstResponder];
+    [self.view endEditing:YES];
+    [_numberTextField endEditing:YES];
 
 }
 
