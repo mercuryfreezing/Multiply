@@ -33,7 +33,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="121" y="397" width="65" height="30"/>
+                                    <rect key="frame" x="119" y="338" width="65" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="onCalculateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f4B-7e-urp"/>
@@ -69,16 +69,33 @@
                                     <action selector="sliderAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="JPt-A0-n4J"/>
                                 </connections>
                             </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4qv-cl-ZA1">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="/"/>
+                                    <segment title="-"/>
+                                    <segment title="*"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="68" y="83" width="180" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vQg-LT-WeY"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="end-WR-DpS"/>
+                                <exclude reference="4qv-cl-ZA1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="end-WR-DpS"/>
+                                <include reference="4qv-cl-ZA1"/>
                             </mask>
                         </variation>
                     </view>
@@ -86,6 +103,7 @@
                         <outlet property="answerLabel" destination="jpM-JZ-rm3" id="nSC-gc-0wd"/>
                         <outlet property="multiplierLabel" destination="52z-r1-oGw" id="2Fw-L2-OlZ"/>
                         <outlet property="numberTextField" destination="8pF-5K-cWE" id="3HE-Np-Brc"/>
+                        <outlet property="operatorLabel" destination="4qv-cl-ZA1" id="Aut-e7-9HJ"/>
                         <outlet property="sliderForMultiplier" destination="end-WR-DpS" id="bpc-Gf-f54"/>
                     </connections>
                 </viewController>

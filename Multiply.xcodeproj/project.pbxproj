@@ -14,7 +14,6 @@
 		F402441A19D9F96600466618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F402441919D9F96600466618 /* Images.xcassets */; };
 		F402441D19D9F96600466618 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F402441B19D9F96600466618 /* LaunchScreen.xib */; };
 		F402442919D9F96600466618 /* MultiplyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F402442819D9F96600466618 /* MultiplyTests.m */; };
-		F402443319D9F9BB00466618 /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F402443219D9F9BB00466618 /* CheckMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		F402442219D9F96600466618 /* MultiplyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiplyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F402442719D9F96600466618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F402442819D9F96600466618 /* MultiplyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiplyTests.m; sourceTree = "<group>"; };
-		F402443219D9F9BB00466618 /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F402443319D9F9BB00466618 /* CheckMate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +87,6 @@
 				F402441419D9F96600466618 /* ViewController.m */,
 				F402441619D9F96600466618 /* Main.storyboard */,
 				F402441919D9F96600466618 /* Images.xcassets */,
-				F402443219D9F9BB00466618 /* CheckMate.framework */,
 				F402441B19D9F96600466618 /* LaunchScreen.xib */,
 				F402440C19D9F96600466618 /* Supporting Files */,
 			);

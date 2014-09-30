@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *multiplierLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UISlider *sliderForMultiplier;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *operatorLabel;
+@property (weak, nonatomic) NSString *operator;
 
 @end
 
@@ -31,6 +33,27 @@
     //int num = (int)[NSString stringWithFormat:@"%f", self.sliderForMultiplier.value];
     self.multiplierLabel.text = [NSString stringWithFormat:@"%d", (int)self.sliderForMultiplier.value];
 }
+- (IBAction)segmentAction:(UISegmentedControl *)sender {
+
+    switch ([sender selectedSegmentIndex])
+    {
+        case 0:
+
+            self.operator = @"+";
+            break;
+        case 1:
+            self.operator = @"/";
+            break;
+        case 2:
+            self.operator = @"-";
+            break;
+        case 3:
+            self.operator = @"*";
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,9 +61,24 @@
 }
 - (IBAction)onCalculateButtonPressed:(UIButton *)sender {
 
+    double answer;
     int enteredNumber = self.numberTextField.text.intValue;
     int multiplier = self.multiplierLabel.text.intValue;
-    double answer = enteredNumber * multiplier;
+
+
+  if(_operator == @"+")
+      answer = enteredNumber + multiplier;
+    else if (_operator == @"/")
+        answer = enteredNumber /multiplier;
+    else if (_operator == @"-")
+                answer = enteredNumber - multiplier;
+    else if (_operator == @"*")
+                answer = enteredNumber * multiplier;
+
+
+     //answer = enteredNumber * multiplier;
+
+
 
     NSString *answer1 = [NSString stringWithFormat:@"%f", answer];
     self.answerLabel.text = answer1;
