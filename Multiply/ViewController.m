@@ -66,13 +66,13 @@
     int multiplier = self.multiplierLabel.text.intValue;
 
 
-  if(_operator == @"+")
+    if([_operator isEqualToString:@"+"])
       answer = enteredNumber + multiplier;
-    else if (_operator == @"/")
+    else if ([_operator isEqualToString:@"/"])
         answer = enteredNumber /multiplier;
-    else if (_operator == @"-")
+    else if ([_operator isEqualToString:@"-"])
                 answer = enteredNumber - multiplier;
-    else if (_operator == @"*")
+    else if ([_operator isEqualToString:@"*"])
                 answer = enteredNumber * multiplier;
 
 
